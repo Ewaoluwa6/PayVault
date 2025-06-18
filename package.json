@@ -21,15 +21,26 @@
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/express": "^5.0.3",
+<<<<<<< HEAD
     "@types/mongoose": "^5.11.96",
     "@types/node": "^24.0.3",
     "nodemon": "^3.1.10",
+=======
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/mongoose": "^5.11.96",
+    "@types/node": "^24.0.3",
+>>>>>>> f777733 (Authentication logic)
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "dependencies": {
+<<<<<<< HEAD
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "mongoose": "^8.16.0"
+=======
+    "bcrypt": "^6.0.0",
+    "jsonwebtoken": "^9.0.2"
+>>>>>>> f777733 (Authentication logic)
   }
 }
