@@ -2,11 +2,11 @@ import { Document, model, Schema } from 'mongoose';
 
 export interface IUser extends Document {
   name: string;
-  UserId: string;
+  id: string;
   email: string;
   phoneNumber: string;
   password: string; // hashed
-  accountNumber: string | null;
+  accountNumber: string;
   balance: number;
 }
 
@@ -25,7 +25,7 @@ const UserSchema: Schema = new Schema({
     }
   },
   password: { type: String, required: true },
-  accountNumber: { type: String,  unique: true },
+  accountNumber: { type: String, required: true, unique: true },
   balance: { type: Number, required: true, default: 0 }
 }, { timestamps: true });
 

@@ -3,6 +3,7 @@ import { Request, Response } from 'express'
 import { User } from '../model/userModel'
 import { BankDetails } from '../model/bankModel'
 import crypto from 'crypto';
+
  
 export default class Users {
   public withdrawVault = (req: Request, res: Response): any => {
