@@ -3,6 +3,7 @@ import { Request, Response } from 'express'
 import { User } from '../model/userModel'
 import { BankDetails } from '../model/bankModel'
 import crypto from 'crypto';
+import { ETransactionType, Transaction } from '../model/transactionModel';
 
  
 export default class Users {
@@ -163,6 +164,7 @@ public fundAccount = async (req: Request, res: Response): Promise<any> => {
     // Update balance
     bankDetail.accountBalance = (bankDetail.accountBalance || 0) + Number(amount);
     await bankDetail.save();
+    await Transaction.create({userId, amount, transactionType: ETransactionType.funding})
 
     return res.status(200).json({
       message: "Account funded successfully.",
